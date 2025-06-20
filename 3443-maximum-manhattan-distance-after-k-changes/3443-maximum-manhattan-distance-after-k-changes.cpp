@@ -14,12 +14,9 @@ public:
             ans+=z;
             else
             {
-                ans+=k;
-                z-=k;
-                ans-=z;
+                ans+=(2*k - z);
             }
             ans1=max(ans,ans1);
-
         }
         return ans1;
     }
