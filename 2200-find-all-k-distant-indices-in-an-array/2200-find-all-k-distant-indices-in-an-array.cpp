@@ -7,7 +7,7 @@ public:
         {
             if(v[i]==key) v1.push_back(i);
         }
-        set<int> s;
+        unordered_set<int> s;
         for(int i=0;i<v1.size();i++)
         {
             int x=max(0,v1[i]-k),y=min(n-1,v1[i]+k);
@@ -15,6 +15,7 @@ public:
         }
         vector<int> ans;
         for(auto i:s) ans.push_back(i);
+        sort(ans.begin(),ans.end());
         return ans;
         
     }
