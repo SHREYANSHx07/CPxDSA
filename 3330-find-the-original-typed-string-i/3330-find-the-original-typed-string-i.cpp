@@ -1,10 +1,22 @@
 class Solution {
 public:
     int possibleStringCount(string s) {
-        unordered_map<char,int> m;
-        for(auto i:s) m[i]++;
-        int ans=s.size()-m.size();
-        return ans+1;
+        int ans=0;
+        char x=s[0];
+        int y=0;
+        for(int i=1;i<s.size();i++)
+        {
+            if(s[i]==x) y++;
+            else
+            {
+                ans+=y;
+                y=0;
+                x=s[i];
+            }
+        }
+        if(y) ans+=y;
+        ans++;
+        return ans;
         
     }
 };
