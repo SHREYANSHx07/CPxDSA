@@ -1,7 +1,7 @@
 class Solution {
 public:
     int possibleStringCount(string s) {
-        int ans=0;
+        int ans=1;
         char x=s[0];
         int y=0;
         for(int i=1;i<s.size();i++)
@@ -15,7 +15,6 @@ public:
             }
         }
         if(y) ans+=y;
-        ans++;
         return ans;
         
     }
