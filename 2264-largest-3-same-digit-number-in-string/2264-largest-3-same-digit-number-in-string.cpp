@@ -43,9 +43,6 @@ public:
                 x=y;
             }
         }
-        for(auto i:v) cout<<i<<" ";
-        cout<<'\n';
-        cout<<j<<" ";
         if(j!=-1)
         return v[j];
         else
